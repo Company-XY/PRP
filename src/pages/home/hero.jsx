@@ -1,6 +1,6 @@
 import africa from "../../assets/africa.jpg";
 
-const Section1 = () => {
+const Hero = () => {
   const backgroundImage = {
     backgroundImage: `url(${africa})`,
   };
@@ -40,4 +40,4 @@ const Section1 = () => {
   );
 };
 
-export default Section1;
+export default Hero;
