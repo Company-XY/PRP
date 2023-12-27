@@ -15,10 +15,10 @@ const Section1 = () => {
         </div>
         {/* Navigation Links */}
         <ul className="flex space-x-10 mr-9">
-          <li><a href="#" className="hover:text-gray-300">Home</a></li>
-          <li><a href="#" className="hover:text-gray-300">About</a></li>
-          <li><a href="#" className="hover:text-gray-300">Services</a></li>
-          <li><a href="#" className="hover:text-gray-300">Contact</a></li>
+          <li><a href="#" className="hover:text-gray">Home</a></li>
+          <li><a href="#" className="hover:text-gray">About</a></li>
+          <li><a href="#" className="hover:text-gray">Services</a></li>
+          <li><a href="#" className="hover:text-gray">Contact</a></li>
         </ul>
       </nav>
       <div className="col-span-1 md:col-span-1" >
@@ -29,7 +29,7 @@ const Section1 = () => {
           </div>
           <div className="mt-12 ml-12 grid grid-cols-2">
             <div><button className="rounded-[10px] ring-offset-2 ring-1 mt-1 p-1 px-10"><p className="text-white ">Learn More..</p></button></div>
-            <div><button className="rounded-[10px] bg-black p-2 px-12"><p className="text-white ">Join Now</p></button></div>
+            <div><button className="rounded-[10px] bg-black p-2 px-12 transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300"><p className="text-white ">Join Now</p></button></div>
           </div>
         </div>
       </div>

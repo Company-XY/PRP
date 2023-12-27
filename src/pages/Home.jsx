@@ -1,11 +1,11 @@
-import Section1 from "./home/section1";
-import Section2 from "./home/section2";
+import Hero from "./home/hero";
+import Features from "./home/features";
 
 const Home = () => {
   return (
     <div>
-      <Section1 />
-      <Section2/>
+      <Hero />
+      <Features/>
     </div>
   );
 };
