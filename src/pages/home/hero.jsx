@@ -28,8 +28,8 @@ const Hero = () => {
             <p className="text-white text-left text-lg ml-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <span className="inline-block"/>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
           </div>
           <div className="mt-12 ml-12 grid grid-cols-2">
-            <div><button className="rounded-[10px] ring-offset-2 ring-1 mt-1 p-1 px-10"><p className="text-white ">Learn More..</p></button></div>
-            <div><button className="rounded-[10px] bg-black p-2 px-12 transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300"><p className="text-white ">Join Now</p></button></div>
+            <div><button className="rounded-[10px] ring-offset-2 ring-1 mt-1 p-1 px-10  transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"><p className="text-white ">Learn More..</p></button></div>
+            <div><button className="rounded-[10px] bg-black p-2 px-12 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-gray duration-300"><p className="text-white ">Join Now</p></button></div>
           </div>
         </div>
       </div>

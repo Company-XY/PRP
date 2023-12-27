@@ -13,8 +13,8 @@ theme: {
   colors: {
     'blue': '#1fb6ff',
     'purple': '#7e5bef',
-    'pink': '#ff49db',
-    'orange': '#ff7849',
+    'pink': '#f5f5f5',
+    'light grey': '#e0e0e0',
     'green': '#13ce66',
     'grey': '#607d8b',
     'black': '#000000',
