@@ -16,10 +16,10 @@ theme: {
     'pink': '#ff49db',
     'orange': '#ff7849',
     'green': '#13ce66',
-    'yellow': '#ffc82c',
-    'gray-dark': '#273444',
+    'grey': '#607d8b',
+    'black': '#000000',
     'gray': '#8492a6',
-    'gray-light': '#d3dce6',
+    'white': '#ffffff',
   },
   fontFamily: {
     sans: ['Graphik', 'sans-serif'],
