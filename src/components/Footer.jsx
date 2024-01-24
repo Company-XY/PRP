@@ -1,10 +1,16 @@
-import React from 'react';
-import { FaFacebook, FaTwitter, FaPinterest, FaLinkedin, FaGoogle } from 'react-icons/fa';
+import React from "react";
+import {
+  FaFacebook,
+  FaTwitter,
+  FaPinterest,
+  FaLinkedin,
+  FaGoogle,
+} from "react-icons/fa";
 
 const Footer = () => {
-    const currentYear = new Date().getFullYear();
+  const currentYear = new Date().getFullYear();
   return (
-    <div className='bg-gradient-to-l from-grey to-black'>
+    <div className="bg-gradient-to-l from-grey to-black">
       <div className="flex justify-center space-x-4 p-4">
         <div className="text-center flex flex-col items-center">
           <div className="rounded-full bg-black p-4">
@@ -14,19 +20,19 @@ const Footer = () => {
 
         <div className="text-center flex flex-col items-center">
           <div className="rounded-full bg-black p-4">
-            <FaTwitter size={16} color="white"  />
+            <FaTwitter size={16} color="white" />
           </div>
         </div>
 
         <div className="text-center flex flex-col items-center">
           <div className="rounded-full bg-black p-4">
-            <FaPinterest size={16} color="white"  />
+            <FaPinterest size={16} color="white" />
           </div>
         </div>
 
         <div className="text-center flex flex-col items-center">
           <div className="rounded-full bg-black p-4">
-            <FaLinkedin size={16} color="white"  />
+            <FaLinkedin size={16} color="white" />
           </div>
         </div>
 
@@ -37,8 +43,10 @@ const Footer = () => {
         </div>
       </div>
       <div>
-          <p className="text-white text-sm text-center p-2">&copy; {currentYear} PRP. All Rights Reserved.</p>
-        </div>
+        <p className="text-white text-sm text-center p-2">
+          &copy; {currentYear} PRP. All Rights Reserved.
+        </p>
+      </div>
     </div>
   );
 };
