@@ -10,7 +10,7 @@ import {
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   return (
-    <div className="bg-gradient-to-l from-grey to-black">
+    <div className="bottom-0 bg-gradient-to-l from-grey to-black">
       <div className="flex justify-center space-x-4 p-4">
         <div className="text-center flex flex-col items-center">
           <div className="rounded-full bg-black p-4">
