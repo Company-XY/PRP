@@ -1,50 +1,63 @@
-import React from 'react';
-import { FaHeadphones, FaChartLine } from 'react-icons/fa';
-import { IoFlash } from 'react-icons/io5';
+import React from "react";
+import { FaHeadphones, FaChartLine } from "react-icons/fa";
+import { IoFlash } from "react-icons/io5";
 
 const Features = () => {
   return (
     <div className="bg-white p-4">
       <div>
-        <span className="text-4xl font-bold text-center block mt-10 mb-10">Features</span>
+        <span className="text-4xl font-bold text-center block mt-10 mb-10">
+          Features
+        </span>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-2 p-10">
-        {/* Headphones Icon */}
+        {/* Press Release Creation and Management */}
         <div className="text-center flex flex-col items-center">
           <div className="rounded-full bg-black p-4">
             <FaHeadphones size={32} color="green" />
           </div>
           <div className="mt-2">
-            <span className="text-xl font-bold">Communication</span>
+            <span className="text-xl font-bold">
+              Simplify Your News Distribution Experience with PRP
+            </span>
           </div>
           <p className="text-sm mt-2">
-            High-Quality Sound: Immerse yourself <br />in a world of crystal-clear audio with our premium headphones.
+            PRP offers a user-friendly platform that empowers communication
+            professionals to easily create and manage press releases. With our
+            intuitive interface, you can upload multimedia assets, schedule
+            releases, and maintain version control for consistent and
+            professional communication.
           </p>
         </div>
 
-        {/* Flash Icon */}
+        {/* Algorithmic Triage System */}
         <div className="text-center flex flex-col items-center">
           <div className="rounded-full bg-black p-4">
             <IoFlash size={32} color="yellow" />
           </div>
           <div className="mt-2">
-            <span className="text-xl font-bold">Fast</span>
+            <span className="text-xl font-bold">Algorithmic Triage System</span>
           </div>
           <p className="text-sm mt-2">
-            Flash Speed: Experience lightning-fast <br />performance and responsiveness with our cutting-edge flash technology.
+            Experience lightning-fast performance and responsiveness with our
+            cutting-edge algorithmic triage system that prioritizes messages for
+            distribution based on factors like source reputation and historical
+            accuracy.
           </p>
         </div>
 
-        {/* Growth Icon */}
+        {/* Advanced Content Analysis */}
         <div className="text-center flex flex-col items-center">
           <div className="rounded-full bg-black p-4">
             <FaChartLine size={32} color="green" />
           </div>
           <div className="mt-2">
-            <span className="text-xl font-bold">Growth</span>
+            <span className="text-xl font-bold">Advanced Content Analysis</span>
           </div>
           <p className="text-sm mt-2">
-            Sustainable Growth: Achieve steady and <br /> sustainable growth with our innovative solutions.
+            Enhance news wire functionality with advanced content analysis
+            tools, including natural language processing and multimedia
+            verification.
           </p>
         </div>
       </div>
