@@ -1,45 +1,53 @@
-import React from "react";
-import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import Avatar from "../../assets/avatar.svg";
 
-const Testimonials = () => {
+const Testimonial = () => {
   const testimonials = [
     {
+      id: 0,
       name: "John Doe",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      title: "Communication Expert",
+      content:
+        "I love using this platform! It has made my life so much easier. The user-friendly interface and features are fantastic.",
     },
     {
+      id: 1,
       name: "Jane Smith",
-      text: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      title: "Public Relations Officer",
+      content:
+        "I've been using this service for months, and it's been a great experience. The support team is responsive, and the platform is reliable.",
     },
     {
-      name: "Jane Doe",
-      text: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      id: 2,
+      name: "John Smith",
+      title: "Head of Marketing, AIX Inc",
+      content:
+        "Being a long-time subscriber, I appreciate the regular updates and new features. It keeps getting better and better!",
     },
   ];
 
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+  };
+
   return (
-    <div className="h-screen bg-pink">
-      <div className="text-black text-center">
-        <span className="text-4xl font-bold">Reviews</span>
-        <p className="text-sm mt-3">
-          Sustainable Growth: Achieve steady and <br /> sustainable growth with
-          our innovative solutions.
-        </p>
-      </div>
-      <div className="flex justify-center items-center mt-10">
-        <Carousel
-          autoPlay={true}
-          interval={4000}
-          showArrows={false}
-          showThumbs={false}
-          infiniteLoop={true}
-        >
-          {/* Map over testimonials and render each one */}
-          {testimonials.map((testimonial, index) => (
-            <div key={index}>
-              <div className="max-w-xs mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
+    <section className="relative max-w-7xl mx-auto overflow-hidden bg-white px-6 py-24 sm:py-32 lg:px-8">
+      <h2 className="text-center text-3xl lg:text-4xl font-bold mb-4 text-gray-800">
+        What Our Users Say
+      </h2>
+      <div className="mx-auto max-w-2xl lg:max-w-4xl">
+        <Slider {...settings} className="slick-carousel">
+          {testimonials.map((testimonial) => (
+            <div key={testimonial.id} className="text-center lg:text-left">
+              <div className="bg-white p-6">
                 <div className="flex justify-center items-center h-48">
                   <img
                     className="rounded-full bg-grey w-24 h-24 object-cover"
@@ -47,21 +55,18 @@ const Testimonials = () => {
                     alt="Avatar"
                   />
                 </div>
-                <div className="px-6 py-4">
-                  <div className="font-bold text-center text-xl mb-2">
-                    {testimonial.name}
-                  </div>
-                  <p className="text-gray text-center">
-                    &ldquo;{testimonial.text}&rdquo;
-                  </p>
-                </div>
+                <h1 className="font-semibold text-xl lg:text-2xl mb-2 text-gray-800">
+                  {testimonial.name}
+                </h1>
+                <p className="text-gray-600 leading-6">{testimonial.content}</p>
+                <p className="text-gray-500 mt-4">{testimonial.title}</p>
               </div>
             </div>
           ))}
-        </Carousel>
+        </Slider>
       </div>
-    </div>
+    </section>
   );
 };
 
-export default Testimonials;
+export default Testimonial;

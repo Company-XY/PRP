@@ -6,7 +6,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="h-[90dvh] grid grid-cols-1 md:grid-cols-2 bg-gradient-to-r from-grey to-black">
+    <div className="h-[90dvh] px-8 grid grid-cols-1 md:grid-cols-2 bg-gradient-to-r from-grey to-black">
       <div className="col-span-1 md:col-span-1">
         <div className="flex flex-col h-full">
           <div className="mt-20">
@@ -22,11 +22,6 @@ const Hero = () => {
             </p>
           </div>
           <div className="mt-12 ml-12 flex justify-start space-x-5">
-            <div>
-              <button className="rounded-[10px] ring-offset-2 ring-1 mt-1 p-1 px-10  transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
-                <p className="text-white ">Learn More..</p>
-              </button>
-            </div>
             <Link to="/signup">
               <button className="rounded-[10px] bg-black p-2 px-12 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-gray duration-300">
                 <p className="text-white ">Join Now</p>
