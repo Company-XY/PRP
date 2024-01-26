@@ -1,9 +1,10 @@
 import Hero from "./Hero";
 import Features from "./Features";
 import About from "./About";
-import Features2 from "./Features2";
 import Testimonials from "./Testimonials";
 import FAQ from "./FAQ";
+import Contacts from "./Contacts";
+import Pricing from "./Pricing";
 
 const Home = () => {
   return (
@@ -11,9 +12,10 @@ const Home = () => {
       <Hero />
       <About />
       <Features />
-      <Features2 />
+      <Pricing />
       <Testimonials />
       <FAQ />
+      <Contacts />
     </>
   );
 };

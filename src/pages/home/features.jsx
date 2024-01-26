@@ -1,27 +1,16 @@
 import React from "react";
-import { FaHeadphones, FaChartLine } from "react-icons/fa";
-import { IoFlash } from "react-icons/io5";
+import africana from "../../assets/africana.jpg";
 
 const Features = () => {
   return (
-    <div className="bg-white p-4">
-      <div>
-        <span className="text-4xl font-bold text-center block mt-10 mb-10">
-          Features
-        </span>
-      </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-2 p-10">
-        {/* Press Release Creation and Management */}
-        <div className="text-center flex flex-col items-center">
-          <div className="rounded-full bg-black p-4">
-            <FaHeadphones size={32} color="green" />
-          </div>
-          <div className="mt-2">
-            <span className="text-xl font-bold">
-              Simplify Your News Distribution Experience with PRP
-            </span>
-          </div>
-          <p className="text-sm mt-2">
+    <div className="bg-white py-8 px-10">
+      <section className="flex flex-wrap items-center p-10 my-4">
+        <div className="w-full md:w-1/2">
+          <p className="text-gray-600 uppercase font-bold">Effortless</p>
+          <h2 className="font-semibold text-3xl my-4">
+            Simplify Your News Distribution Experience with PRP
+          </h2>
+          <p className="text-gray-700 leading-8">
             PRP offers a user-friendly platform that empowers communication
             professionals to easily create and manage press releases. With our
             intuitive interface, you can upload multimedia assets, schedule
@@ -29,38 +18,68 @@ const Features = () => {
             professional communication.
           </p>
         </div>
-
-        {/* Algorithmic Triage System */}
-        <div className="text-center flex flex-col items-center">
-          <div className="rounded-full bg-black p-4">
-            <IoFlash size={32} color="yellow" />
-          </div>
-          <div className="mt-2">
-            <span className="text-xl font-bold">Algorithmic Triage System</span>
-          </div>
-          <p className="text-sm mt-2">
-            Experience lightning-fast performance and responsiveness with our
-            cutting-edge algorithmic triage system that prioritizes messages for
-            distribution based on factors like source reputation and historical
-            accuracy.
+        <div className="w-full md:w-1/2 flex justify-center">
+          <img
+            src={africana}
+            alt="Africana"
+            className="w-full md:max-w-md rounded-md"
+          />
+        </div>
+      </section>
+      <section className="flex flex-wrap items-center p-10 my-4">
+        <div className="w-full md:w-1/2 flex justify-center">
+          <img
+            src={africana}
+            alt="Africana"
+            className="w-full md:max-w-md rounded-md"
+          />
+        </div>
+        <div className="w-full md:w-1/2">
+          <p className="text-gray-600 uppercase font-bold">Fast</p>
+          <h2 className="font-semibold text-3xl my-4">
+            Save time and gain valuable insight with our powerful analytics
+            tools.
+          </h2>
+          <p className="text-gray-700 leading-8">
+            Our platform empowers communication professionals by providing a
+            user-friendly interface for crafting compelling press releases. With
+            features such as multimedia asset uploads, version control, and
+            scheduled releases, you can streamline your communication efforts
+            and ensure consistent and professional messaging. Additionally, our
+            performance analytics and reporting tools offer detailed insights
+            into press release distribution, media coverage, audience
+            engagement, and campaign performance, enabling you to make
+            data-driven decisions and optimize your communication strategy.
           </p>
         </div>
-
-        {/* Advanced Content Analysis */}
-        <div className="text-center flex flex-col items-center">
-          <div className="rounded-full bg-black p-4">
-            <FaChartLine size={32} color="green" />
-          </div>
-          <div className="mt-2">
-            <span className="text-xl font-bold">Advanced Content Analysis</span>
-          </div>
-          <p className="text-sm mt-2">
-            Enhance news wire functionality with advanced content analysis
-            tools, including natural language processing and multimedia
-            verification.
+      </section>
+      <section className="flex flex-wrap items-center p-10 my-4">
+        <div className="w-full md:w-1/2">
+          <p className="text-gray-600 uppercase font-bold">Value</p>
+          <h2 className="font-semibold text-3xl my-4">
+            Empower Your Media Journey with PRP's Essential Features and
+            Valuable News
+          </h2>
+          <p className="text-gray-700 leading-8">
+            As a media practitioner, PRP offers you free access to essential
+            features and valuable news to revolutionize your media journey.
           </p>
+          <ul className="text-gray-700 leading-8 list-disc pl-6 mt-4">
+            <li>Craft compelling press releases effortlessly</li>
+            <li>Build valuable connections with media outlets</li>
+            <li>
+              Prioritize credibility with multi-level verification process
+            </li>
+          </ul>
         </div>
-      </div>
+        <div className="w-full md:w-1/2 flex justify-center">
+          <img
+            src={africana}
+            alt="Africana"
+            className="w-full md:max-w-md rounded-md"
+          />
+        </div>
+      </section>
     </div>
   );
 };

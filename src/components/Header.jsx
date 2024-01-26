@@ -12,17 +12,17 @@ const Header = () => {
       <ul className="flex space-x-10 mr-9">
         <li>
           <Link to="/" className="hover:text-gray">
+            About
+          </Link>
+        </li>
+        <li>
+          <Link to="/" className="hover:text-gray">
             Services
           </Link>
         </li>
         <li>
           <Link to="/" className="hover:text-gray">
-            Blog
-          </Link>
-        </li>
-        <li>
-          <Link to="/" className="hover:text-gray">
-            About
+            Pricing
           </Link>
         </li>
         <li>
