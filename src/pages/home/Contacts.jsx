@@ -9,7 +9,7 @@ const Contacts = () => {
           <MdEmail size={48} className="text-blue-500" />
           <h3 className="text-lg font-semibold mt-2 mb-1">Email Us</h3>
         </div>
-        <p className="text-gray-700 underline">info@prp.com</p>
+        <p className="text-gray-700">info@prp.com</p>
       </div>
 
       <div className="bg-gray-100 p-8 mx-4 text-center">
@@ -17,7 +17,7 @@ const Contacts = () => {
           <MdPhone size={48} className="text-blue-500" />
           <h3 className="text-lg font-semibold mt-2 mb-1">Call Us</h3>
         </div>
-        <p className="text-gray-700 underline">+1234567890</p>
+        <p className="text-gray-700">+1234567890</p>
       </div>
 
       <div className="bg-gray-100 p-8 mx-4">
@@ -25,7 +25,7 @@ const Contacts = () => {
           <MdLocationOn size={48} className="text-blue-500" />
           <h3 className="text-lg font-semibold mt-2 mb-1">Visit Us</h3>
         </div>
-        <p className="text-gray-700 underline">123 Street, Nairobi, Kenya</p>
+        <p className="text-gray-700">123 Street, Nairobi, Kenya</p>
       </div>
     </div>
   );
