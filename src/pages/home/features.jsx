@@ -6,7 +6,7 @@ const Features = () => {
     <div className="bg-white py-8 px-10">
       <section className="flex flex-wrap items-center p-10 my-4">
         <div className="w-full md:w-1/2">
-          <p className="text-gray-600 uppercase font-bold">Effortless</p>
+          <p className="text-blue uppercase font-bold">Effortless</p>
           <h2 className="font-semibold text-3xl my-4">
             Simplify Your News Distribution Experience with PRP
           </h2>
@@ -35,7 +35,7 @@ const Features = () => {
           />
         </div>
         <div className="w-full md:w-1/2">
-          <p className="text-gray-600 uppercase font-bold">Fast</p>
+          <p className="text-blue uppercase font-bold">Fast</p>
           <h2 className="font-semibold text-3xl my-4">
             Save time and gain valuable insight with our powerful analytics
             tools.
@@ -55,7 +55,7 @@ const Features = () => {
       </section>
       <section className="flex flex-wrap items-center p-10 my-4">
         <div className="w-full md:w-1/2">
-          <p className="text-gray-600 uppercase font-bold">Value</p>
+          <p className="text-blue uppercase font-bold">Value</p>
           <h2 className="font-semibold text-3xl my-4">
             Empower Your Media Journey with PRP's Essential Features and
             Valuable News

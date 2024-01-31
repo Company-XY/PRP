@@ -1,7 +1,7 @@
 import React from "react";
 
 const newsmakerDashboard = () => {
-  return <div>newsmaker Dashboard</div>;
+  return <div className="grid place-items-center">newsmaker Dashboard</div>;
 };
 
 export default newsmakerDashboard;
