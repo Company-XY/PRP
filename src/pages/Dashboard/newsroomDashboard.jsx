@@ -1,7 +1,7 @@
 import React from "react";
 
 const newsroomDashboard = () => {
-  return <div>newsroom Dashboard</div>;
+  return <div className="grid place-items-center">newsroom Dashboard</div>;
 };
 
 export default newsroomDashboard;

@@ -8,7 +8,7 @@ const About = () => {
       <div className="md:w-1/2 p-8 bg-pink">
         <div className="flex flex-col justify-center h-full">
           <div className="mt-20 md:mt-0 md:ml-12">
-            <h1 className="font-bold text-3xl md:text-4xl text-black mb-6">
+            <h1 className="font-bold text-3xl md:text-4xl text-blue mb-6">
               About PRP
             </h1>
             <p className="text-base text-black mb-4">
@@ -39,7 +39,7 @@ const About = () => {
         <img
           src={africana}
           alt="Africana"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover rounded-md"
         />
       </div>
     </div>
