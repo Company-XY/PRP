@@ -2,6 +2,9 @@ import React from "react";
 import axios from "axios";
 
 const Login = () => {
+
+    const baseUrl = "https://prp-server.onrender.com/api/v1";
+    
     return (
         <div className="relative flex flex-col justify-center min-h-screen overflow-hidden">
             <div className="w-full p-6 m-auto bg-white rounded-md shadow-xl lg:max-w-xl">
