@@ -19,17 +19,18 @@ const Signup = () => {
     if (password === password2) {
       try {
         setLoading(true);
-        const response = await axios.post(`${baseUrl}/signup`, {
+        const response = await axios.post(`${baseUrl}/auth/signup`, {
           role,
           username,
           email,
           password,
         });
-        console.log(response.data);
+        const userRole = response.data.role;
+        localStorage.setItem("userRole", userRole);
         navigate("/dashboard");
       } catch (error) {
         setError(
-          error.response.data.message || "An error occurred during signup."
+          error.response.data.error || "An error occurred during signup."
         );
         console.error("Signup error:", error.response.data);
       } finally {
@@ -61,10 +62,8 @@ const Signup = () => {
               className="block w-full px-4 py-2 mt-2 text-grey bg-white border rounded-md focus:border-blue focus:ring-blue focus:outline-none focus:ring focus:ring-opacity-40"
             >
               <option value="">Select Role</option>
-              <option value="communications_practitioner">
-                Communications Practitioner
-              </option>
-              <option value="newsroom">Newsroom</option>
+              <option value="Newsmaker">Communications Practitioner</option>
+              <option value="Newsroom">Newsroom</option>
             </select>
           </div>
           <div className="mb-2">
