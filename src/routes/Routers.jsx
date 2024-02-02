@@ -3,6 +3,7 @@ import Home from "../pages/Home/Home";
 import Dashboard from "../pages/Dashboard/mainDashboard";
 import Login from "../pages/Auth/Login";
 import Signup from "../pages/Auth/Signup";
+import ForgotPassword from "../pages/Auth/forgotPassword";
 
 function Routers() {
   return (
@@ -12,6 +13,7 @@ function Routers() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/forgot_password" element={<ForgotPassword />} />
       </Routes>
     </>
   );
