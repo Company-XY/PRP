@@ -7,7 +7,7 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
-  
+
   const navigate = useNavigate();
   const baseUrl = "https://prp-server.onrender.com/api/v1";
 
@@ -20,6 +20,8 @@ const Login = () => {
         password,
       });
       console.log(response.data);
+      const userRole = response.data.role;
+      localStorage.setItem("userRole", userRole);
       navigate("/dashboard");
     } catch (error) {
       setError(

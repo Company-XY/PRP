@@ -1,11 +1,21 @@
 import React from "react";
-import Admin from "./adminDashboard";
-import Newsmaker from "./newsmakerDashboard";
-import Newsroom from "./newsroomDashboard";
-import axios from "axios";
+import AdminDashboard from "./AdminDashboard";
+import NewsmakerDashboard from "./NewsmakerDashboard";
+import NewsroomDashboard from "./NewsroomDashboard";
 
-const mainDashboard = () => {
-  return <div>main Dashboard</div>;
+const MainDashboard = () => {
+  const userRole = localStorage.getItem("userRole");
+
+  switch (userRole) {
+    case "admin":
+      return <AdminDashboard />;
+    case "newsmaker":
+      return <NewsmakerDashboard />;
+    case "newsroom":
+      return <NewsroomDashboard />;
+    default:
+      return <div>Error: Invalid user role.</div>;
+  }
 };
 
-export default mainDashboard;
+export default MainDashboard;
