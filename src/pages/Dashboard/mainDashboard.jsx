@@ -7,11 +7,11 @@ const MainDashboard = () => {
   const userRole = localStorage.getItem("userRole");
 
   switch (userRole) {
-    case "admin":
+    case "Admin":
       return <AdminDashboard />;
-    case "newsmaker":
+    case "Newsmaker":
       return <NewsmakerDashboard />;
-    case "newsroom":
+    case "Newsroom":
       return <NewsroomDashboard />;
     default:
       return <div>Error: Invalid user role.</div>;

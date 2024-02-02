@@ -15,18 +15,15 @@ const Login = () => {
     e.preventDefault();
     try {
       setLoading(true);
-      const response = await axios.post(`${baseUrl}/login`, {
+      const response = await axios.post(`${baseUrl}/auth/login`, {
         email,
         password,
       });
-      console.log(response.data);
       const userRole = response.data.role;
       localStorage.setItem("userRole", userRole);
       navigate("/dashboard");
     } catch (error) {
-      setError(
-        error.response.data.message || "An error occurred during login."
-      );
+      setError(error.response.data.error || "An error occurred during login.");
       console.error("Login error:", error.response.data);
     } finally {
       setLoading(false);
