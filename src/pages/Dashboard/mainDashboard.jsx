@@ -1,10 +1,19 @@
-import React from "react";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import AdminDashboard from "./AdminDashboard";
 import NewsmakerDashboard from "./NewsmakerDashboard";
 import NewsroomDashboard from "./NewsroomDashboard";
 
 const MainDashboard = () => {
-  const userRole = localStorage.getItem("userRole");
+  const navigate = useNavigate();
+  const user = JSON.parse(localStorage.getItem("user"));
+  const userRole = user ? user.role : null;
+
+  useEffect(() => {
+    if (!user) {
+      navigate("/");
+    }
+  }, [user, navigate]);
 
   switch (userRole) {
     case "Admin":

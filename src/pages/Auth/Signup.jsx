@@ -1,6 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
+import { setUser } from "../../store/Slices/userSlice";
+import { useDispatch, useSelector } from "react-redux";
 
 const Signup = () => {
   const [role, setRole] = useState("");
@@ -12,7 +14,16 @@ const Signup = () => {
   const [loading, setLoading] = useState(false);
 
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const baseUrl = "https://prp-server.onrender.com/api/v1";
+
+  const user = useSelector((state) => state.user.user);
+
+  useEffect(() => {
+    if (user) {
+      navigate("/dashboard");
+    }
+  }, [user, navigate]);
 
   const handleSignup = async (e) => {
     e.preventDefault();
@@ -25,8 +36,7 @@ const Signup = () => {
           email,
           password,
         });
-        const userRole = response.data.role;
-        localStorage.setItem("userRole", userRole);
+        dispatch(setUser(response.data));
         navigate("/dashboard");
       } catch (error) {
         setError(
@@ -43,7 +53,7 @@ const Signup = () => {
 
   return (
     <div className="relative flex flex-col justify-center min-h-screen overflow-hidden">
-      <div className="w-full p-6 m-auto bg-white rounded-md shadow-xl lg:max-w-xl">
+      <div className="w-full my-10 p-6 m-auto bg-white rounded-md shadow-xl lg:max-w-xl">
         <h1 className="text-3xl font-semibold text-center text-blue">
           Sign up
         </h1>
@@ -105,6 +115,11 @@ const Signup = () => {
               className="block w-full px-4 py-2 mt-2 text-grey bg-white border rounded-md focus:border-blue focus:ring-blue focus:outline-none focus:ring focus:ring-opacity-40"
             />
           </div>
+          <p className="text-xs text-gray-500 mt-1 my-3">
+            Password must be at least 8 characters long and include one
+            uppercase letter, one lowercase letter, one digit, and one special
+            character.
+          </p>
           <div className="mb-2">
             <label
               htmlFor="confirmPassword"
@@ -124,14 +139,14 @@ const Signup = () => {
           <div className="mt-6">
             <button
               type="submit"
-              className="w-full px-4 py-2 tracking-wide font-semibold text-black transition-colors duration-200 transform bg-white rounded-md hover:bg-blue focus:outline-none focus:bg-blue"
+              className="w-full px-4 py-2 border hover:border-none tracking-wide font-semibold text-black transition-colors duration-200 transform bg-white rounded-md hover:bg-blue focus:outline-none focus:bg-blue"
             >
               {loading ? "Please Wait" : "Sign up"}
             </button>
           </div>
         </form>
         <p className="mt-8 text-xs font-light text-center text-black">
-          Already have an account?{" "}
+          Already have an account ?{" "}
           <Link
             to="/login"
             className="font-medium text-purple-600 hover:underline"
