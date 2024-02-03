@@ -1,6 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
+import { setUser } from "../../store/Slices/userSlice";
+import { useDispatch, useSelector } from "react-redux";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -9,7 +11,16 @@ const Login = () => {
   const [loading, setLoading] = useState(false);
 
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const baseUrl = "https://prp-server.onrender.com/api/v1";
+
+  const user = useSelector((state) => state.user.user);
+
+  useEffect(() => {
+    if (user) {
+      navigate("/dashboard");
+    }
+  }, [user, navigate]);
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -19,8 +30,7 @@ const Login = () => {
         email,
         password,
       });
-      const userRole = response.data.role;
-      localStorage.setItem("userRole", userRole);
+      dispatch(setUser(response.data));
       navigate("/dashboard");
     } catch (error) {
       setError(error.response.data.error || "An error occurred during login.");
@@ -32,7 +42,7 @@ const Login = () => {
 
   return (
     <div className="relative flex flex-col justify-center min-h-screen overflow-hidden">
-      <div className="w-full p-6 m-auto bg-white rounded-md shadow-xl lg:max-w-xl">
+      <div className="w-full mt-10 p-6 m-auto bg-white rounded-md shadow-xl lg:max-w-xl">
         <h1 className="text-3xl font-semibold text-center text-blue">
           Sign in
         </h1>
@@ -51,12 +61,20 @@ const Login = () => {
             />
           </div>
           <div className="mb-2">
-            <label
-              for="password"
-              className="block text-sm font-semibold text-gray-800"
-            >
-              Password
-            </label>
+            <div className="flex justify-between">
+              <label
+                htmlFor="password"
+                className="block text-sm font-semibold text-gray-800"
+              >
+                Password
+              </label>
+              <Link
+                to="/forgot_password"
+                className="text-xs text-blue font-semibold hover:underline"
+              >
+                Forgot Password ?
+              </Link>
+            </div>
             <input
               type="password"
               onChange={(e) => setPassword(e.target.value)}
@@ -66,16 +84,10 @@ const Login = () => {
           {error && (
             <div className="text-red-600 text-center mt-4">{error}</div>
           )}
-          <Link
-            to="/forgot_password"
-            className="text-xs text-black hover:underline"
-          >
-            Forget Password?
-          </Link>
           <div className="mt-6">
             <button
               type="submit"
-              className="w-full px-4 py-2 tracking-wide font-semibold text-black transition-colors duration-200 transform bg-white rounded-md hover:bg-blue focus:outline-none focus:bg-blue"
+              className="w-full px-4 py-2 border hover:border-none tracking-wide font-semibold text-black transition-colors duration-200 transform bg-white rounded-md hover:bg-blue focus:outline-none focus:bg-blue"
             >
               {loading ? "Please Wait" : "Login"}
             </button>

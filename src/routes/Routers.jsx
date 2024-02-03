@@ -4,10 +4,14 @@ import Dashboard from "../pages/Dashboard/mainDashboard";
 import Login from "../pages/Auth/Login";
 import Signup from "../pages/Auth/Signup";
 import ForgotPassword from "../pages/Auth/forgotPassword";
+import ScrollToTopOnPageChange from "../components/ScrollToTopOnPageChange";
+import BackToTop from "../components/BackToTop";
 
 function Routers() {
   return (
     <>
+      <ScrollToTopOnPageChange />
+      <BackToTop />
       <Routes>
         <Route index element={<Home />} />
         <Route path="/dashboard" element={<Dashboard />} />
