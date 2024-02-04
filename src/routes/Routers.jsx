@@ -14,7 +14,7 @@ function Routers() {
       <BackToTop />
       <Routes>
         <Route index element={<Home />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/dashboard/*" element={<Dashboard />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/forgot_password" element={<ForgotPassword />} />
