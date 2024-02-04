@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link, Outlet } from "react-router-dom";
 
 const Sidenav = () => {
   return (
@@ -41,10 +41,12 @@ const NewsroomDashboard = () => {
       </section>
       <section className="basis-3/4">
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/dashboard/press" element={<PressRelease />} />
-          <Route path="/dashboard/account" element={<Account />} />
-          <Route path="/dashboard/settings" element={<Settings />} />
+          <Route path="/dashboard/*" element={<Outlet />}>
+            <Route index element={<Home />} />
+            <Route path="press" element={<PressRelease />} />
+            <Route path="account" element={<Account />} />
+            <Route path="settings" element={<Settings />} />
+          </Route>
         </Routes>
       </section>
     </div>
