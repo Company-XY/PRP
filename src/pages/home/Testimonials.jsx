@@ -39,7 +39,7 @@ const Testimonial = () => {
   };
 
   return (
-    <section className="relative max-w-7xl mx-auto overflow-hidden bg-white px-6 py-24 sm:py-32 lg:px-8">
+    <section className=" max-w-7xl mx-auto overflow-hidden bg-white px-6 py-24 sm:py-32 lg:px-8">
       <h2 className="text-center text-3xl lg:text-4xl font-bold mb-4 text-gray-800">
         What Our Users Say
       </h2>
