@@ -40,17 +40,23 @@ const NewsroomDashboard = () => {
         <Sidenav />
       </section>
       <section className="basis-3/4">
-        <Routes>
-          <Route path="/dashboard/*" element={<Outlet />}>
-            <Route index element={<Home />} />
-            <Route path="press" element={<PressRelease />} />
-            <Route path="account" element={<Account />} />
-            <Route path="settings" element={<Settings />} />
-          </Route>
-        </Routes>
+        <Outlet />
       </section>
     </div>
   );
 };
 
-export default NewsroomDashboard;
+const DashboardRoutes = () => {
+  return (
+    <Routes>
+      <Route path="/" element={<NewsroomDashboard />}>
+        <Route index element={<Home />} />
+        <Route path="/press" element={<PressRelease />} />
+        <Route path="/account" element={<Account />} />
+        <Route path="/settings" element={<Settings />} />
+      </Route>
+    </Routes>
+  );
+};
+
+export default DashboardRoutes;
