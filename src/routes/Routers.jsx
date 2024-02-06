@@ -6,6 +6,8 @@ import Signup from "../pages/Auth/Signup";
 import ForgotPassword from "../pages/Auth/forgotPassword";
 import ScrollToTopOnPageChange from "../components/ScrollToTopOnPageChange";
 import BackToTop from "../components/BackToTop";
+//import Settings from "../pages/Features/Settings";
+//import Account from "../pages/Features/Account";
 
 function Routers() {
   return (

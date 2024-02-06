@@ -1,30 +1,8 @@
 import React from "react";
 import { Routes, Route, Link, Outlet } from "react-router-dom";
 
-const Sidenav = () => {
-  return (
-    <div className="text-black mt-10 flex flex-col">
-      <li className="">
-        <Link to="/dashboard">Home</Link>
-      </li>
-      <li>
-        <Link to="/dashboard/press">Press Release</Link>
-      </li>
-      <li>
-        <Link to="/dashboard/account">Account</Link>
-      </li>
-      <li>
-        <Link to="/dashboard/settings">Settings</Link>
-      </li>
-    </div>
-  );
-};
-
 const Home = () => {
   return <div>Home</div>;
-};
-const PressRelease = () => {
-  return <div>Press Release</div>;
 };
 const Account = () => {
   return <div>Account</div>;
@@ -33,30 +11,37 @@ const Settings = () => {
   return <div>Settings</div>;
 };
 
-const NewsroomDashboard = () => {
+const newsroomDashboard = () => {
   return (
     <div className="flex w-full h-screen">
-      <section className="basis-1/4">
-        <Sidenav />
+      <section className="basis-1/4 bg-gray-800 text-black px-4 py-6">
+        {/* Side Nav */}
+        <nav>
+          <ul className="space-y-4">
+            <li>
+              <Link to="*">Home</Link>
+            </li>
+            <li>
+              <Link to="account">Account</Link>
+            </li>
+            <li>
+              <Link to="settings">Settings</Link>
+            </li>
+          </ul>
+        </nav>
       </section>
-      <section className="basis-3/4">
-        <Outlet />
+      <section className="basis-3/4 p-4">
+        <Routes>
+          <Route path="/" element={<Home />} />
+
+          <Route path="account" element={<Account />} />
+          <Route path="settings" element={<Settings />} />
+
+          <Route path="*" element={<Outlet />} />
+        </Routes>
       </section>
     </div>
   );
 };
 
-const DashboardRoutes = () => {
-  return (
-    <Routes>
-      <Route path="/" element={<NewsroomDashboard />}>
-        <Route index element={<Home />} />
-        <Route path="/press" element={<PressRelease />} />
-        <Route path="/account" element={<Account />} />
-        <Route path="/settings" element={<Settings />} />
-      </Route>
-    </Routes>
-  );
-};
-
-export default DashboardRoutes;
+export default newsroomDashboard;
