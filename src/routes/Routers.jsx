@@ -6,8 +6,8 @@ import Signup from "../pages/Auth/Signup";
 import ForgotPassword from "../pages/Auth/forgotPassword";
 import ScrollToTopOnPageChange from "../components/ScrollToTopOnPageChange";
 import BackToTop from "../components/BackToTop";
-//import Settings from "../pages/Features/Settings";
-//import Account from "../pages/Features/Account";
+import Settings from "../pages/Features/Settings";
+import Account from "../pages/Features/Account";
 
 function Routers() {
   return (
@@ -16,7 +16,10 @@ function Routers() {
       <BackToTop />
       <Routes>
         <Route index element={<Home />} />
-        <Route path="/dashboard/*" element={<Dashboard />} />
+        <Route path="/dashboard" element={<Dashboard />}>
+          <Route path="settings" element={<Settings />} />
+          <Route path="account" element={<Account />} />
+        </Route>
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/forgot_password" element={<ForgotPassword />} />
