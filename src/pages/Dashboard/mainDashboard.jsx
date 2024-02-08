@@ -7,7 +7,7 @@ import NewsroomDashboard from "./NewsroomDashboard";
 const MainDashboard = () => {
   const navigate = useNavigate();
   const user = JSON.parse(localStorage.getItem("user"));
-  const userRole = user ? user.role : null;
+  const userRole = user.role;
 
   useEffect(() => {
     if (!user) {
